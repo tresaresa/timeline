@@ -58,7 +58,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/DBConn.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
-              <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -67,7 +67,7 @@
         <entry file="file://$PROJECT_DIR$/src/test/dao/DBConnTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -212,7 +212,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573189946165" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573190306464" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -415,7 +415,7 @@
       <workItem from="1572961213073" duration="7526000" />
       <workItem from="1573031761711" duration="16885000" />
       <workItem from="1573103013272" duration="808000" />
-      <workItem from="1573187473650" duration="2465000" />
+      <workItem from="1573187473650" duration="2824000" />
     </task>
     <servers />
   </component>
@@ -428,11 +428,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="29691000" />
+    <option name="totallyTimeSpent" value="30050000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="375" y="73" width="1299" height="739" extended-state="0" />
-    <editor active="true" />
+    <frame x="375" y="73" width="1299" height="739" extended-state="1" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7284768" visible="true" weight="0.18785425" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -519,7 +518,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/DBConn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="20" lean-forward="true" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
+          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -556,7 +555,7 @@
     <entry file="file://$PROJECT_DIR$/src/test/dao/DBConnTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
