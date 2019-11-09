@@ -1,5 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-         pageEncoding="UTF-8"%>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
 <html>
@@ -22,7 +21,7 @@
             dataType : "json",
             success : function(data) {
                 var item = "<tbody>";
-                for (i in data) {
+                for (var i in data) {
                     item += "<tr><td><p><span>"+data[i].author+
                         "</span><span>"+""+
                         "</span></p><p>"+data[i].content+"</p></td></tr>";

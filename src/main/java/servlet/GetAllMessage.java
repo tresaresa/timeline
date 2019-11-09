@@ -22,7 +22,7 @@ public class GetAllMessage extends javax.servlet.http.HttpServlet {
         System.out.println("start to get all message");
 
         MessageDAO messageDAO = new MessageDAO();
-        ArrayList<Message> allMessage = messageDAO.getAll();
+        ArrayList<Message> allMessage = messageDAO.getAllDesc();
         JSONArray jsonArray = JSONArray.fromObject(allMessage);
         System.out.println(jsonArray);
         response.getWriter().write(jsonArray.toString());
