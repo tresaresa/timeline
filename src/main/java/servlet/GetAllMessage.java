@@ -24,7 +24,6 @@ public class GetAllMessage extends javax.servlet.http.HttpServlet {
         MessageDAO messageDAO = new MessageDAO();
         ArrayList<Message> allMessage = messageDAO.getAllDesc();
         JSONArray jsonArray = JSONArray.fromObject(allMessage);
-        System.out.println(jsonArray);
         response.getWriter().write(jsonArray.toString());
     }
 }

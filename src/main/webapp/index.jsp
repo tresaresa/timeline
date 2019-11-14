@@ -6,6 +6,7 @@
 <head>
 
 <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="webjars/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 <script src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css"/>
 
@@ -36,6 +37,46 @@
             }
         });
     }
+
+    function getMore() {
+        var top = document.getElementById('timeline-inner-wrapper').scrollTop;
+        document.getElementById('timeline-inner-wrapper').scrollTo(0, top + 300);
+    }
+
+    function getNew() {
+        var latest_id = $("#timeline-content").children("td:first-child").text()
+        alert("id " + latest_id)
+        $.ajax({
+            type : "POST",
+            url : "GetNewMessage",
+            dataType : "json",
+            data : {
+                "latest_id" : latest_id
+            },
+            success : function(data) {
+                var item = "<tbody>";
+                for (var i in data) {
+                    item += "<tr><td><p><span>"+data[i].author+
+                        "</span><span>"+""+
+                        "</span></p><p>"+data[i].content+"</p></td></tr>";
+                }
+                item += "</tbody>"
+                $("#timeline-content").append(item);
+            },
+            error : function(XMLHttpRequest, textStatus, errorThrown) {
+                alert(XMLHttpRequest.status);
+                alert(XMLHttpRequest.readyState);
+                alert(textStatus);
+            }
+        });
+    }
+
+    function test() {
+        $.cookie('name', '1');
+        var n = $.cookie('name');
+        alert(n);
+    }
+
 </script>
 
 <style>
@@ -47,6 +88,7 @@
     border: 1px dashed #66CCFF;
     border-left: 0;
     border-right: 0;
+    border-bottom: 0;
 }
 #timeline-content tr:last-child td {
     border-bottom: 0;
@@ -63,6 +105,7 @@
 #timeline-foot {
     border-top: 1px solid #66CCFF;
     text-align: center;
+    border-top: 0;
 }
 
 #timeline-inner-wrapper {
@@ -98,12 +141,12 @@
 }
 #timeline-inner-wrapper::-webkit-scrollbar-thumb {
     border-radius: 3px;
-    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0);
     background: white;
     border: 1px solid #66CCFF
 }
 #timeline-inner-wrapper::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0);
 }
 </style>
 
@@ -113,12 +156,12 @@
 
 <div class="container">
     <div class="bootstrap-table timeline-wrapper">
-        <p id="timeline-head"><b>Timeline</b><input class="btn btn-default" type="button" value="更新" id="btn-update"></p>
+        <p id="timeline-head"><b>Timeline</b><input class="btn btn-default" type="button" value="更新" id="btn-update" onclick="test()"></p>
         <div id="timeline-inner-wrapper">
             <table class="table table-hover" id="timeline-content">
             </table>
         </div>
-        <p id="timeline-foot"><input class="btn btn-default" type="button" value="更多" id="btn-more"></p>
+        <p id="timeline-foot"><input class="btn btn-default" type="button" value="更多" id="btn-more" onclick="getMore()"></p>
     </div>
 </div>
 

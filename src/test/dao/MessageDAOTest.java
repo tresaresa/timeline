@@ -2,16 +2,22 @@ package dao;
 
 import entity.Message;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.mockito.ArgumentCaptor;
+import org.mockito.internal.verification.Times;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
 
 /**
  * @Author Tresaresa
@@ -19,11 +25,31 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class MessageDAOTest {
 
-    private MessageDAO messageDAO = new MessageDAO();
+    Connection connection = mock(Connection.class);
+    PreparedStatement preparedStatement = mock(PreparedStatement.class);
+
+    class MessageDAOFake extends MessageDAO {
+
+        @Override
+        protected void loadDriver() {
+
+        }
+
+        @Override
+        protected Connection getConnection() {
+            return connection;
+        }
+    }
+
+    private MessageDAO messageDAO;
+
+    @BeforeEach
+    public void init() {
+        messageDAO = new MessageDAOFake();
+    }
 
     @Test
     void getAllMessageDesc() {
-        messageDAO = new MessageDAO();
         ArrayList<Message> allMessage = messageDAO.getAllDesc();
         assertNotNull(allMessage);
         // the test database has 5 rows at all
@@ -34,15 +60,25 @@ class MessageDAOTest {
 
     @ParameterizedTest
     @MethodSource("provideMessageWithList")
-    void addOneMessage(String content, String author) {
-        int affectedRows = messageDAO.addOneMessage(content, author);
-        assertEquals(1, affectedRows);
-        Message newMessage = messageDAO.getAllDesc().get(0);
-        // delete the test message
-        messageDAO.deleteById(newMessage.getId());
-        // content and author shouldn't be empty
-        assertEquals(content, newMessage.getContent());
-        assertEquals(author, newMessage.getAuthor());
+    void addOneMessage(String content, String author) throws Exception{
+        // stubbing
+        when(connection.prepareStatement(anyString())).thenReturn(preparedStatement);
+        // calling actual method and test state
+        boolean result = messageDAO.addOneMessage(content, author);
+        assertTrue(result);
+        // creating argument captors
+        ArgumentCaptor<String> stringArgumentCaptor = ArgumentCaptor.forClass(String.class);
+        ArgumentCaptor<Integer> integerArgumentCaptor = ArgumentCaptor.forClass(Integer.class);
+        // verifying the mocked prepared-statement's setString is invoked 2 times
+        verify(preparedStatement, new Times(2)).setString(integerArgumentCaptor.capture(), stringArgumentCaptor.capture());
+        // verifying the arguments passed to the statement object
+        assertEquals(content, stringArgumentCaptor.getAllValues().get(0));
+        assertEquals(author, stringArgumentCaptor.getAllValues().get(1));
+        // verifying the mock resources were used and closed
+        verify(connection).commit();
+        verify(preparedStatement).executeUpdate();
+        verify(connection).close();
+        verify(preparedStatement).close();
     }
 
     static List<Arguments> provideMessageWithList() {
