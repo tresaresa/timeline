@@ -7,13 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df450e4d-e07d-45be-bd04-9e1af41f82e6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/getNewMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/DBConn.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/dao/MessageDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dao/MessageDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/GetAllMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/GetAllMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/entity/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/entity/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/getNewMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/getNewMessage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/dao/DBConnTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/dao/MessageDAOTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/dao/MessageDAOTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -29,7 +29,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
+            <state>
               <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
             </state>
           </provider>
@@ -45,42 +45,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/entity/Message.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#777#778#0" expanded="true" />
-                <element signature="e#819#820#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-910">
-              <caret line="90" column="21" lean-forward="true" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/getNewMessage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+            <state relative-caret-position="243">
+              <caret line="66" column="75" selection-start-line="66" selection-start-column="75" selection-end-line="66" selection-end-column="75" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/DBConn.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/getNewMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+            <state relative-caret-position="118">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -88,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/MessageDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="544">
-              <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
+            <state relative-caret-position="110">
+              <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#462#463#0" expanded="true" />
@@ -102,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/servlet/GetAllMessage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
+            <state relative-caret-position="152">
+              <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -111,11 +88,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/dao/MessageDAOTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
+            <state relative-caret-position="-158">
+              <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,19 +121,19 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/entity/Message.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/DBConn.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/dao/DBConnTest.java" />
         <option value="$PROJECT_DIR$/src/test/dao/DBConnTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/main.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/Main.java" />
-        <option value="$PROJECT_DIR$/src/test/dao/MessageDAOTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/MessageDAO.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/GetAllMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/getNewMessage.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/getNewMessage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/entity/Message.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/MessageDAO.java" />
+        <option value="$PROJECT_DIR$/src/test/dao/MessageDAOTest.java" />
       </list>
     </option>
   </component>
@@ -168,8 +145,8 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="161" />
-    <option name="y" value="96" />
+    <option name="x" value="162" />
+    <option name="y" value="50" />
     <option name="width" value="1625" />
     <option name="height" value="930" />
   </component>
@@ -178,6 +155,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -217,22 +195,6 @@
               <item name="timeline" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="timeline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="timeline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="timeline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="timeline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -241,14 +203,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="timeline" type="b2602c69:ProjectViewProjectNode" />
-              <item name="timeline" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="timeline" type="b2602c69:ProjectViewProjectNode" />
@@ -267,13 +221,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573701890329" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573800673876" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -306,7 +259,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.35">
+  <component name="RunManager" selected="JUnit.MessageDAOTest.getAllMessageDesc">
     <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="servlet.Main" />
       <module name="timeline" />
@@ -506,8 +459,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MessageDAOTest.addOneMessage" />
         <item itemvalue="JUnit.MessageDAOTest.getAllMessageDesc" />
+        <item itemvalue="JUnit.MessageDAOTest.addOneMessage" />
         <item itemvalue="JUnit.DBConnTest" />
       </list>
     </recent_temporary>
@@ -537,28 +490,11 @@
       <workItem from="1573697094513" duration="4879000" />
       <workItem from="1573707127179" duration="936000" />
       <workItem from="1573738239270" duration="2961000" />
+      <workItem from="1573796468805" duration="4217000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="MessageDAOTest_addOneMessage - 2019.11.09 at 14h 19m 00s.xml">
-      <configuration name="MessageDAOTest.addOneMessage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessageDAOTest_getAllMessageDesc - 2019.11.09 at 14h 21m 14s.xml">
-      <configuration name="MessageDAOTest.getAllMessageDesc" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessageDAOTest_getAllMessageDesc - 2019.11.09 at 14h 23m 12s.xml">
-      <configuration name="MessageDAOTest.getAllMessageDesc" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessageDAOTest_addOneMessage - 2019.11.13 at 15h 42m 23s.xml">
-      <configuration name="MessageDAOTest.addOneMessage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessageDAOTest_addOneMessage - 2019.11.13 at 15h 43m 11s.xml">
-      <configuration name="MessageDAOTest.addOneMessage" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="MessageDAOTest_addOneMessage - 2019.11.13 at 15h 50m 02s.xml">
-      <configuration name="MessageDAOTest.addOneMessage" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="MessageDAOTest_addOneMessage - 2019.11.13 at 15h 57m 30s.xml">
       <configuration name="MessageDAOTest.addOneMessage" configurationId="JUnit" />
     </history-entry>
@@ -571,25 +507,43 @@
     <history-entry file="MessageDAOTest_addOneMessage - 2019.11.14 at 10h 06m 02s.xml">
       <configuration name="MessageDAOTest.addOneMessage" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="MessageDAOTest_getAllMessageDesc - 2019.11.15 at 14h 42m 56s.xml">
+      <configuration name="MessageDAOTest.getAllMessageDesc" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageDAOTest_getAllMessageDesc - 2019.11.15 at 14h 43m 38s.xml">
+      <configuration name="MessageDAOTest.getAllMessageDesc" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageDAOTest_getAllMessageDesc - 2019.11.15 at 14h 46m 45s.xml">
+      <configuration name="MessageDAOTest.getAllMessageDesc" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageDAOTest_getAllMessageDesc - 2019.11.15 at 14h 47m 15s.xml">
+      <configuration name="MessageDAOTest.getAllMessageDesc" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageDAOTest_getAllMessageDesc - 2019.11.15 at 14h 47m 35s.xml">
+      <configuration name="MessageDAOTest.getAllMessageDesc" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="MessageDAOTest_getAllMessageDesc - 2019.11.15 at 14h 51m 18s.xml">
+      <configuration name="MessageDAOTest.getAllMessageDesc" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59776000" />
+    <option name="totallyTimeSpent" value="63993000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="129" y="77" width="1300" height="744" extended-state="0" />
+    <frame x="130" y="40" width="1300" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.831405" visible="true" weight="0.18527508" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.88099176" visible="true" weight="0.18851133" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.16859505" side_tool="true" visible="true" weight="0.18527508" />
+      <window_info id="Web" order="7" sideWeight="0.119008265" side_tool="true" visible="true" weight="0.18851133" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32066116" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36694214" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39933443" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -663,6 +617,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlet/Main.java" />
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/DBConn.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -670,46 +631,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/MessageDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="544">
-          <caret line="37" column="7" selection-start-line="37" selection-start-column="7" selection-end-line="37" selection-end-column="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#462#463#0" expanded="true" />
-            <element signature="e#490#491#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/GetAllMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="25" column="63" selection-start-line="25" selection-start-column="63" selection-end-line="25" selection-end-column="63" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/dao/MessageDAOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="67" column="25" selection-start-line="67" selection-start-column="25" selection-end-line="67" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/Message.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
+        <state relative-caret-position="461">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#777#778#0" expanded="true" />
             <element signature="e#819#820#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#947#948#0" expanded="true" />
+            <element signature="e#981#982#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -721,24 +653,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+        <state relative-caret-position="243">
+          <caret line="66" column="75" selection-start-line="66" selection-start-column="75" selection-end-line="66" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/GetAllMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-910">
-          <caret line="90" column="21" lean-forward="true" selection-start-line="90" selection-start-column="21" selection-end-line="90" selection-end-column="21" />
+        <state relative-caret-position="152">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlet/getNewMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="39" column="22" selection-start-line="39" selection-start-column="22" selection-end-line="39" selection-end-column="22" />
+        <state relative-caret-position="118">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/MessageDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="18" selection-end-line="48" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#490#491#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/dao/MessageDAOTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-158">
+          <caret line="56" column="32" selection-start-line="56" selection-start-column="32" selection-end-line="56" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

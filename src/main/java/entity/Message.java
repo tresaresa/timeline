@@ -12,6 +12,7 @@ public class Message {
     private String content;
     private String author;
     private Timestamp timestamp;
+    private String image;
 
     public int getId() {
         return id;
@@ -43,5 +44,13 @@ public class Message {
 
     public void setTimestamp(Timestamp timestamp) {
         this.timestamp = timestamp;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

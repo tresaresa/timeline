@@ -12,6 +12,7 @@ import org.mockito.internal.verification.Times;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -49,13 +50,16 @@ class MessageDAOTest {
     }
 
     @Test
-    void getAllMessageDesc() {
+    void getAllMessageDesc() throws Exception {
+        when(connection.prepareStatement(anyString())).thenReturn(preparedStatement);
+        when(preparedStatement.executeQuery()).thenReturn(mock(ResultSet.class));
+
         ArrayList<Message> allMessage = messageDAO.getAllDesc();
         assertNotNull(allMessage);
-        // the test database has 5 rows at all
-        assertEquals(5, allMessage.size());
-        // the first row has the largest id
-        assertTrue(allMessage.get(0).getId()>=allMessage.get(allMessage.size() - 1).getId());
+
+        verify(preparedStatement).executeQuery();
+        verify(connection).close();
+        verify(preparedStatement).close();
     }
 
     @ParameterizedTest

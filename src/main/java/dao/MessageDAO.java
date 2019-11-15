@@ -37,26 +37,48 @@ public class MessageDAO {
      * select all messages in descending order
      */
     public ArrayList<Message> getAllDesc() {
-        ArrayList<Message> allMessage = new ArrayList<Message>();
+        Connection conn = null;
+        PreparedStatement preparedStatement = null;
+
         try {
-            Connection conn = getConnection();
-            PreparedStatement preparedStatement = conn.prepareStatement("select * from message order by id desc");
+            conn = getConnection();
+            preparedStatement = conn.prepareStatement("select * from message order by id desc");
             ResultSet resultSet = preparedStatement.executeQuery();
+
+            ArrayList<Message> allMessage = new ArrayList<Message>();
             while(resultSet.next()) {
                 Message message = new Message();
                 message.setId(resultSet.getInt("id"));
                 message.setAuthor(resultSet.getString("author"));
                 message.setContent(resultSet.getString("content"));
                 message.setTimestamp(resultSet.getTimestamp("timestamp"));
+                message.setImage(resultSet.getString("image"));
                 allMessage.add(message);
             }
-            conn.close();
+            return allMessage;
         }
         catch (SQLException e) {
             e.printStackTrace();
         }
-        System.out.println(allMessage);
-        return allMessage;
+        finally {
+            if (conn != null) {
+                try {
+                    conn.close();
+                }
+                catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (preparedStatement != null) {
+                try {
+                    preparedStatement.close();
+                }
+                catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return null;
     }
 
     /**
@@ -99,20 +121,4 @@ public class MessageDAO {
         return false;
     }
 
-    /**
-     * delete one message by id
-     */
-    public int deleteById(int id) {
-        int affectedRows = -1;
-        try {
-            Connection conn = getConnection();
-            PreparedStatement preparedStatement = conn.prepareStatement("delete from message where id=?");
-            preparedStatement.setInt(1, id);
-            affectedRows = preparedStatement.executeUpdate();
-        }
-        catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return affectedRows;
-    }
 }

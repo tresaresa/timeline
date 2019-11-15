@@ -16,7 +16,7 @@ import java.util.ArrayList;
  * @Author Tresaresa
  * @Date 2019/11/14 10:46
  */
-@WebServlet(name = "getNewMessage")
+@WebServlet("/GetNewMessage")
 public class getNewMessage extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -26,7 +26,7 @@ public class getNewMessage extends HttpServlet {
         System.out.println("start to get new message");
 
         int latestId = Integer.parseInt(request.getParameter("latest_id"));
-
+        System.out.println(latestId);
         MessageDAO messageDAO = new MessageDAO();
         ArrayList<Message> allMessage = messageDAO.getAllDesc();
 
@@ -40,7 +40,6 @@ public class getNewMessage extends HttpServlet {
                 break;
             }
         }
-
 
         JSONArray jsonArray = JSONArray.fromObject(newMessage);
         response.getWriter().write(jsonArray.toString());

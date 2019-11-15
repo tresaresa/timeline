@@ -21,11 +21,16 @@
             url : "GetAllMessage",
             dataType : "json",
             success : function(data) {
+                $.cookie('latest_id', data[0].id);
                 var item = "<tbody>";
                 for (var i in data) {
                     item += "<tr><td><p><span>"+data[i].author+
                         "</span><span>"+""+
-                        "</span></p><p>"+data[i].content+"</p></td></tr>";
+                        "</span></p><p>"+data[i].content+"</p>";
+                    if (data[i].image.length >= 1) {
+                        item += "<p><img alt=': )' src='"+data[i].image+"' height='100'/></p>";
+                    }
+                    item += "</td></tr>";
                 }
                 item += "</tbody>"
                 $("#timeline-content").append(item);
@@ -44,8 +49,7 @@
     }
 
     function getNew() {
-        var latest_id = $("#timeline-content").children("td:first-child").text()
-        alert("id " + latest_id)
+        var latest_id = $.cookie('latest_id');
         $.ajax({
             type : "POST",
             url : "GetNewMessage",
@@ -58,10 +62,14 @@
                 for (var i in data) {
                     item += "<tr><td><p><span>"+data[i].author+
                         "</span><span>"+""+
-                        "</span></p><p>"+data[i].content+"</p></td></tr>";
+                        "</span></p><p>"+data[i].content+"</p>";
+                    if (data[i].image.length >= 1) {
+                        item += "<p><img alt=': )' src='"+data[i].image+"' height='100'/></p>";
+                    }
+                    item += "</td></tr>";
                 }
-                item += "</tbody>"
-                $("#timeline-content").append(item);
+                item += "</tbody>";
+                $('#timeline-content').prepend(item);
             },
             error : function(XMLHttpRequest, textStatus, errorThrown) {
                 alert(XMLHttpRequest.status);
@@ -69,12 +77,6 @@
                 alert(textStatus);
             }
         });
-    }
-
-    function test() {
-        $.cookie('name', '1');
-        var n = $.cookie('name');
-        alert(n);
     }
 
 </script>
@@ -153,10 +155,9 @@
 </head>
 
 <body>
-
 <div class="container">
     <div class="bootstrap-table timeline-wrapper">
-        <p id="timeline-head"><b>Timeline</b><input class="btn btn-default" type="button" value="更新" id="btn-update" onclick="test()"></p>
+        <p id="timeline-head"><b>Timeline</b><input class="btn btn-default" type="button" value="更新" id="btn-update" onclick="getNew()"></p>
         <div id="timeline-inner-wrapper">
             <table class="table table-hover" id="timeline-content">
             </table>
