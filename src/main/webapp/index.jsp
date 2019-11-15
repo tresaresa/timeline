@@ -8,6 +8,7 @@
 <script src="webjars/jquery/3.1.1/jquery.min.js"></script>
 <script src="webjars/jquery-cookie/1.4.1/jquery.cookie.js"></script>
 <script src="webjars/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script src="https://cdn.bootcss.com/timeago.js/3.0.2/timeago.js"></script>
 <link rel="stylesheet" href="webjars/bootstrap/3.3.5/css/bootstrap.min.css"/>
 
 <script>
@@ -24,8 +25,11 @@
                 $.cookie('latest_id', data[0].id);
                 var item = "<tbody>";
                 for (var i in data) {
+                    var timeagoIns = timeago();
+                    var time = timeagoIns.format(new Date(parseInt(data[i].timestamp)), 'zh_CN');
+                    //var time = jQuery.timeago(timestamp);
                     item += "<tr><td><p><span>"+data[i].author+
-                        "</span><span>"+""+
+                        "</span><span style='float:right;'>"+time+
                         "</span></p><p>"+data[i].content+"</p>";
                     if (data[i].image.length >= 1) {
                         item += "<p><img alt=': )' src='"+data[i].image+"' height='100'/></p>";
@@ -60,8 +64,10 @@
             success : function(data) {
                 var item = "<tbody>";
                 for (var i in data) {
+                    var timeagoIns = timeago();
+                    var time = timeagoIns.format(new Date(parseInt(data[i].timestamp)), 'zh_CN');
                     item += "<tr><td><p><span>"+data[i].author+
-                        "</span><span>"+""+
+                        "</span><span style='float:right;'>"+time+
                         "</span></p><p>"+data[i].content+"</p>";
                     if (data[i].image.length >= 1) {
                         item += "<p><img alt=': )' src='"+data[i].image+"' height='100'/></p>";
