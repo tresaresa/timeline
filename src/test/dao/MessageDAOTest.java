@@ -50,7 +50,7 @@ class MessageDAOTest {
     }
 
     @Test
-    void getAllMessageDesc() throws Exception {
+    void should_select_all_message() throws Exception {
         when(connection.prepareStatement(anyString())).thenReturn(preparedStatement);
         when(preparedStatement.executeQuery()).thenReturn(mock(ResultSet.class));
 
@@ -62,9 +62,10 @@ class MessageDAOTest {
         verify(preparedStatement).close();
     }
 
+
     @ParameterizedTest
     @MethodSource("provideMessageWithList")
-    void addOneMessage(String content, String author) throws Exception{
+    void when_unnull_input_then_add_message(String content, String author) throws Exception{
         // stubbing
         when(connection.prepareStatement(anyString())).thenReturn(preparedStatement);
         // calling actual method and test state
@@ -88,5 +89,18 @@ class MessageDAOTest {
     static List<Arguments> provideMessageWithList() {
         return Arrays.asList(Arguments.of("test content", "test author"),
                 Arguments.of("中文测试 内容", "中文测试 作者"));
+    }
+
+    @ParameterizedTest
+    @MethodSource("provideInvalidMessageWithList")
+    void should_throws_exception_when_at_least_one_input_is_null(String author, String content) {
+        Throwable exception = assertThrows(IllegalArgumentException.class, ()->messageDAO.addOneMessage(content, author));
+        assertEquals("Invalid inputs content=[" + content + "], author=[" + author + "]", exception.getMessage());
+    }
+
+    static List<Arguments> provideInvalidMessageWithList() {
+        return Arrays.asList(Arguments.of(null, "test author"),
+                Arguments.of("中文测试 内容", null),
+                Arguments.of(null, null));
     }
 }

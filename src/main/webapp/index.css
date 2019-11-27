@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+#timeline-content{
+    border: 0;
+    font-size: 12px;
+}
+#timeline-content tr td {
+    border: 1px dashed #66CCFF;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+#timeline-content tr:last-child td {
+    border-bottom: 0;
+}
+#timeline-content tr:first-child td {
+    border-top: 0;
+}
+
+#timeline-head {
+    font-size: 20px;
+    padding: 15px;
+    border-bottom: 1px solid #66CCFF;
+}
+#timeline-foot {
+    border-top: 1px solid #66CCFF;
+    text-align: center;
+    border-top: 0;
+}
+
+#timeline-inner-wrapper {
+    width: 100%;
+    height:70%;
+    overflow-y: scroll;
+}
+
+#btn-update {
+    margin-left: 60%;
+    border: 1px solid #66CCFF;
+}
+#btn-more {
+    border: 1px solid #66CCFF;
+    margin-top: 5%;
+}
+
+.bootstrap-table {
+    border-radius: 3px;
+    width: 25%;
+    height: 60%;
+}
+.timeline-wrapper {
+    border: 1px solid #66CCFF;
+    position: absolute;
+    right: 35%;
+    top: 15%;
+}
+
+#timeline-inner-wrapper::-webkit-scrollbar {
+    border-radius: 3px;
+    width: 12px;
+}
+#timeline-inner-wrapper::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0);
+    background: white;
+    border: 1px solid #66CCFF
+}
+#timeline-inner-wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(0,0,0,0);
+}

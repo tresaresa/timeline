@@ -55,6 +55,16 @@ public class MessageDAO {
                 message.setImage(resultSet.getString("image"));
                 allMessage.add(message);
             }
+
+            // if database is empty, then add a notice
+            if (allMessage.isEmpty()) {
+                Message message = new Message();
+                message.setId(-1);
+                message.setAuthor("提醒：");
+                message.setContent("目前还没有人发言");
+                message.setTimestamp(new Timestamp(System.currentTimeMillis()));
+                allMessage.add(message);
+            }
             return allMessage;
         }
         catch (SQLException e) {
@@ -85,6 +95,10 @@ public class MessageDAO {
      * add one new message
      */
     public boolean addOneMessage(String content, String author) {
+        if (content == null || author == null) {
+            throw new IllegalArgumentException("Invalid inputs content=[" + content + "], author=[" + author + "]");
+        }
+
         Connection conn = null;
         PreparedStatement preparedStatement = null;
         try {
